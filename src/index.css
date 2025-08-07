@@ -43,6 +43,8 @@ All colors MUST be HSL.
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(204 94% 94%) 100%);
     --gradient-background: linear-gradient(135deg, hsl(215 28% 7%) 0%, hsl(215 30% 10%) 50%, hsl(217 32% 12%) 100%);
     --gradient-hero: linear-gradient(180deg, transparent 0%, hsl(217 91% 60% / 0.1) 50%, transparent 100%);
+    --gradient-beam: conic-gradient(from 0deg at 50% 50%, transparent 0deg, hsl(217 91% 60% / 0.1) 60deg, hsl(204 94% 94% / 0.05) 120deg, transparent 180deg, hsl(217 91% 60% / 0.1) 240deg, hsl(204 94% 94% / 0.05) 300deg, transparent 360deg);
+    --gradient-beam-radial: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(217 91% 60% / 0.15) 0%, transparent 60%);
     --glow-primary: 0 0 40px hsl(217 91% 60% / 0.3);
     --shadow-card: 0 10px 30px -5px hsl(215 28% 5% / 0.5);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -92,5 +94,19 @@ All colors MUST be HSL.
   .bg-grid-pattern {
     background-image: radial-gradient(circle at 2px 2px, hsl(217 91% 60% / 0.15) 1px, transparent 0);
     background-size: 40px 40px;
+  }
+
+  .bg-beam-effect {
+    background: var(--gradient-beam);
+    animation: rotate-beam 20s linear infinite;
+  }
+
+  .bg-beam-radial {
+    background: var(--gradient-beam-radial);
+  }
+
+  @keyframes rotate-beam {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
 }

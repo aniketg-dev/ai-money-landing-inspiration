@@ -4,6 +4,17 @@ import { ArrowRight, Sparkles } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Beam Effects */}
+      <div className="absolute inset-0">
+        {/* Rotating Conic Beam */}
+        <div className="absolute inset-0 bg-beam-effect opacity-30" />
+        {/* Radial Beam from Top */}
+        <div className="absolute inset-0 bg-beam-radial animate-beam-pulse" />
+        {/* Additional Beam Rays */}
+        <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-primary/20 via-transparent to-transparent transform -translate-x-1/2" />
+        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent transform -translate-y-1/2" />
+      </div>
+      
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       
