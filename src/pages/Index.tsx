@@ -1,13 +1,17 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import FeatureSection from "@/components/FeatureSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <FeatureSection />
+      <FeaturesSection />
+      <CTASection />
+      <Footer />
     </div>
   );
 };
